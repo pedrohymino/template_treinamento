@@ -1,0 +1,89 @@
+.panel-login{
+    background: #353535;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.brand{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+}
+
+.panel-login.loading > form > * > *{opacity: .2 !important;}
+.panel-login.loading form:after{
+    content: 'Carregando...';
+    position: absolute;
+    text-align: center;
+    padding: 8px 16px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 33px;
+    background: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.panel-login form{
+    width: 100%;
+    min-width: 300px;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.panel-login form .form-group {
+    display: inline;
+    margin-bottom: 10px;
+}
+
+.panel-login form .form-group *{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.panel-login form .form-group label{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgba(30, 144, 255, .5);
+}
+.panel-login form .form-group input{
+    width: 100%;
+    box-sizing: border-box;
+    color: rgba(255,255,255,.1);
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255,255,255,.1) !important;
+    transition: all .3s ease;
+    padding: 10px;
+}
+.panel-login form .form-group input:focus,
+.panel-login form .form-group input:active{
+    color: #fff !important;
+    border-bottom: 1px solid rgba(255,255,255,.4) !important;
+}
+
+button:focus,
+button:active,
+button{
+    margin-top: 15px;
+    background: none !important;
+    border: 1px solid #1E90FF;
+    padding: 5px 15px;
+    border-radius: 50px;
+    color: #1E90FF;
+    background: rgba(30, 146, 255, 0);
+    transition: all .3s ease;
+}
+button:hover{
+    box-shadow: none !important;
+    background: rgba(30, 146, 255, 0.2) !important;
+}

@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~primeng/resources/themes/omega/theme.css';
+@import '~primeng/resources/primeng.min.css';
+
+*{font-family: sans-serif;}
+
+textarea, input, button, select {
+    border-radius: 15px;
+    border: 1px solid #1E90FF;
+    outline: none;
+    padding: 3px 6px;
+}
+
+body{margin: 0px !important}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.btn{
+    cursor: pointer !important;
+    padding: 5px 15px;
+    border-radius: 50px;
+}
+.btn:hover{box-shadow: inset 0px 0px 0px 300px rgba(0,0,0,.2);}
+
+p{margin: 0px;}

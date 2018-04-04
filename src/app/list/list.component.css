@@ -1,0 +1,27 @@
+.list-user li{
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+
+.list-user li small{
+    padding: 2px 5px;
+    background: #e0e5f3;
+    border-radius: 50px;
+    transition: all .4s ease;
+    opacity: .4;
+}
+.list-user li:hover small{opacity: 1;}
+
+
+.list-user li .fa{color: #0077FF;}
+
+
+.list-user li.inativo{
+    cursor: not-allowed !important;
+    color: #fd5b70;
+}
+.list-user li.inativo small{background: #F3E0E0;}
+.list-user li.inativo .fa{color: #FA3952;}
+

@@ -1,0 +1,7 @@
+<ul class="list-user">
+  <li *ngFor="let list_user of list" [ngClass]="{'inativo': !list_user.active}">
+    <i *ngIf="list_user.active" class="fa fa-user-circle-o"></i>
+    <i *ngIf="!list_user.active" class="fa fa-user-circle"></i>
+    {{list_user.nome}} <small>{{list_user.email}}</small>
+  </li>
+</ul>

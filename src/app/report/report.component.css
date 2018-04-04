@@ -1,0 +1,59 @@
+.panel-form.loading > form > * > *{opacity: .2 !important;}
+.panel-form.loading form:after{
+    content: 'Carregando...';
+    position: absolute;
+    text-align: center;
+    padding: 8px 16px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 33px;
+    background: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.panel-form form .form-group {
+    display: inline;
+    margin-bottom: 10px;
+}
+
+.panel-form form .form-group *{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.panel-form form .form-group label{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: rgba(30, 144, 255, 1);
+}
+
+
+button:focus,
+button:active,
+button{
+    margin-top: 15px;
+    background: none !important;
+    border: 1px solid #00E466;
+    padding: 5px 15px;
+    border-radius: 50px;
+    color: #00E466;
+    background: rgba(0, 228, 102, 0);
+    transition: all .3s ease;
+}
+button:hover{
+    box-shadow: none !important;
+    background: rgba(0, 228, 102, 0.2) !important;
+}
+
+button > *{
+    display: inline-block !important;
+    margin: 0px !important;
+}
+
+
+
+.col-6{width: 25%; display: inline-block !important;}

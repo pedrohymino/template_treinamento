@@ -1,15 +1,11 @@
-<div [style.display]="_authGuard.visibleMenu?'':'none'" id="menu">
-    <ul>
-        <li><a routerLink="">Dashboard</a></li>
-        <li><a routerLink="/list">List Contact</a></li>
-        <li><a routerLink="/report">Report Bug</a></li>
-        
-        <li class="float-right"><a class="btn sair" (click)="_authGuard.logoff()">Logout</a></li>
-    </ul>
-</div>
+<div class="">
+    <router-outlet></router-outlet>
+    <!-- <div class="sidebar" data-background-color="black" data-active-color="danger">
+        <sidebar-cmp></sidebar-cmp>
+    </div> -->
+    <!-- <div class="main-panel"> -->
+        <!-- <navbar-cmp></navbar-cmp> -->
 
-<!-- view routers -->
-<div class="container-router">
-    <router-outlet>
-    </router-outlet>
+        <!-- <footer-cmp></footer-cmp> -->
+    <!-- </div> -->
 </div>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
-import { AuthGuard } from '../_guards/index';
+import { AuthGuard } from '../_guard/auth-guard';
 
 @Component({
   selector: 'app-login',
@@ -37,7 +37,8 @@ export class LoginComponent implements OnInit {
       this._authGuard.loggin(dados, 1000).then((res) => {
         this.loading = false;
         if(res){
-          this.router.navigateByUrl("");
+          // this.router.navigateByUrl("");
+          this.router.navigate([""], { queryParams: { 'refresh': 1 } });
         }else{
           alert("Senha ou usuario invalido");
         }

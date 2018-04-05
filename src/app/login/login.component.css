@@ -1,17 +1,23 @@
+/* body{background: #353535 !important; } */
 .panel-login{
     background: #353535;
     height: 100%;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
+    overflow: auto;
 }
+
+.panel-login input{border-radius: 0px !important;}
+
 
 .brand{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 20px;
+    height: 80px;
 }
 
 .panel-login.loading > form > * > *{opacity: .2 !important;}
@@ -35,10 +41,14 @@
     width: 100%;
     min-width: 300px;
     max-width: 400px;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); */
+    position: relative;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 .panel-login form .form-group {
     display: inline;
@@ -76,11 +86,11 @@ button:active,
 button{
     margin-top: 15px;
     background: none !important;
-    border: 1px solid #1E90FF;
+    border: 1px solid #1E90FF !important;
     padding: 5px 15px;
     border-radius: 50px;
-    color: #1E90FF;
-    background: rgba(30, 146, 255, 0);
+    color: #1E90FF !important;
+    background: rgba(30, 146, 255, 0) !important;
     transition: all .3s ease;
 }
 button:hover{

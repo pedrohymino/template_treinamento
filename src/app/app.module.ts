@@ -1,39 +1,41 @@
-import { BrowserModule, Title } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from './app.routing.module';
-
-import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
-import {MenuItem} from 'primeng/api';                 //api
-
-import { AuthGuard } from './_guards/index';
 
 import { AppComponent } from './app.component';
+import { AppRoutes } from './app.routing';
+import { SidebarModule } from './sidebar/sidebar.module';
+import { FooterModule } from './shared/footer/footer.module';
+import { NavbarModule} from './shared/navbar/navbar.module';
+import { NguiMapModule} from '@ngui/map';
+
+import { AuthGuard } from './_guard/auth-guard';
+
+import { DashboardComponent }   from './dashboard/dashboard.component';
+import { UserComponent }   from './user/user.component';
+import { TableComponent }   from './table/table.component';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ListComponent } from './list/list.component';
-import { ReportComponent } from './report/report.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     DashboardComponent,
-    ListComponent,
-    ReportComponent
+    UserComponent,
+    TableComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    RouterModule.forRoot(AppRoutes),
+    SidebarModule,
+    NavbarModule,
+    FooterModule,
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=YOUR_KEY_HERE'})
+
   ],
-  providers: [
-    AuthGuard, Title
-  ],
-  bootstrap: [AppComponent],
-  
+  providers: [AuthGuard],
+  bootstrap: [AppComponent]
 })
-export class AppModule { 
-  title = "teste";
-}
+export class AppModule { }
